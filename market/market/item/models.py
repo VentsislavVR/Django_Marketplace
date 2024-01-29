@@ -25,13 +25,13 @@ class Item(models.Model):
 
     )
 
-    image = models.ImageField( # Todo
+    image = models.ImageField(
         upload_to='item_images',
         blank=True,
         null=True,
     )
 
-    is_soled = models.BooleanField(
+    is_sold = models.BooleanField(
         default=False
     )
     created_by = models.ForeignKey(
@@ -47,3 +47,5 @@ class Item(models.Model):
         related_name='items',
         on_delete=models.CASCADE
     )
+    def __str__(self):
+        return self.name

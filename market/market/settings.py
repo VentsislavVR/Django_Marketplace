@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-cz1752qmp&%_ml^z9u!a3-tfcgmy6^#1y#vp8o6z!vtybgvoj0
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 # Application definition
 
@@ -40,6 +42,7 @@ INSTALLED_APPS = [
 
     'market.core',
     'market.item',
+    'market.dashboard',
 ]
 
 MIDDLEWARE = [
@@ -121,7 +124,12 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+MEDIA_URL = 'media/'
+
+MEDIA_ROOT = BASE_DIR / 'media'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
