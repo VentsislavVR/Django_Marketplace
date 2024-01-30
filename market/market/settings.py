@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'market.core',
     'market.item',
     'market.dashboard',
+    'market.conversation',
 ]
 
 MIDDLEWARE = [

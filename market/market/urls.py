@@ -25,4 +25,5 @@ urlpatterns = [
     path('', include('market.core.urls')),
     path('item/', include('market.item.urls')),
     path('dashboard/', include('market.dashboard.urls')),
+    path('conversation/', include('market.conversation.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
